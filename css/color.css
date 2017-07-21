@@ -1,0 +1,10 @@
+body{
+	background-image:url("../img/caniuse-bg.png");
+}
+#main{
+	background-color:#F5EDD9;
+}
+#symbol{
+	background-color:#F6761F;
+	color:white;
+}

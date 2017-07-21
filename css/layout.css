@@ -1,0 +1,31 @@
+body,html{
+	height: 100%;
+	width: 100%;
+}
+#main{
+	position: absolute;
+	left: 100px;
+	width: 90%;
+	height: 90%;
+}
+#symbol{
+	display: inline;
+	height: 30px;
+	width: 30px;
+}
+h1{
+	display: inline;
+	line-height: 100px;
+	padding-left: 50px;
+}
+#global{
+	display: inline;
+	float: right;
+	padding-right: 50px;
+	line-height: 50px;
+}
+#intro{
+	display: inline-block;
+	width: 50%;
+	
+}
