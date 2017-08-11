@@ -1,10 +1,37 @@
-#main:before{
-	content: "#";
-	font-size: 40px;
-	padding: 10px;
-	position: absolute;
-	top:8px;
-	left:-42px;
-	background-color:#F6761F;
-	color:white;
+body {
+    font: 100%/1 'Open Sans', Helvetica, Arial, sans-serif;
+}
+
+
+/*左上角的井号*/
+#sharp {
+    font-size: 40px;
+    position: absolute;
+    top: 8px;
+    left: -42px;
+    display: inline;
+    padding: 10px;
+    color: white;
+    background-color: #f6761f;
+}
+
+@media (max-width: 777px) {
+    #sharp {
+        position: relative;        
+        left: 20px;
+        font-size:20px;
+        padding:6px 10px;
+        margin-right: 3px;
+    }
+}
+
+#sharp:hover{
+    background-color: white;
+    color: brown;
+}
+
+/*中间一排的按钮*/
+.button:hover,.button.selected{
+    color: white;
+    background-color: #EDA745;
 }
