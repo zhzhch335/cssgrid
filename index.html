@@ -1,13 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
   <head>
     <meta charset="UTF-8"/>
     <title>
       CSS Grid Layout
     </title>
-    <link rel="stylesheet" href="css/color.css"/>
-    <link rel="stylesheet" href="css/layout.css"/>
-    <link rel="stylesheet" href="css/adorn.css"/>
+    <link rel="stylesheet" href="css/style.css"/>
+    <link rel="stylesheet" href="css/font.css"/>
   </head>
   <body>
     <div id="main">
@@ -26,9 +25,31 @@
           </div>
         </div>
         <div id="global">
-          Global 65.64% + 5.11% = 70.75
+          <span class="global">
+            Global
+          </span>
+          <span class="global" style="color: #009114" title="65.64% Supported">
+            65.64%
+          </span>
+          <span class="global">
+            +
+          </span>
+          <span class="global" style="color: #7e7e00" title="Partially Supported">
+            5.11%
+          </span>
+          <span class="global">
+            =
+          </span>
+          <span class="global" title="70.75% Total (2.23% untracked browsers)">
+            70.75
+          </span>
           <br/>
-          unprefixed: 65.64%
+          <span class="global" style="font-size: 0.8rem">
+            unprefixed:
+          </span>
+          <span class="global"  style="color: #009114" title="66.65% Supported (2.23% untracked browsers)">
+            65.64%
+          </span>
         </div>
       </div>
       <div id="button-line">
@@ -47,193 +68,252 @@
       </div>
       <div id="color-line">
         <ul class="pool">
-          <li class="ele">
+          <li class="ele ie">
             IE
           </li>
-          <li class="ele">
+          <li class="ele cell">
           </li>
-          <li class="ele">
+          <li class="ele cell">
           </li>
-          <li class="ele">
+          <li class="ele cell">
           </li>
-          <li class="ele">
+          <li class="ele ycell">
+            11
+            <article class="popup">
+              <header>
+                IE11
+              </header>
+              <p class="pleft">
+                <span class="pheader">
+                  Support Info
+                </span>
+                <br/>
+                <br/>
+                <sapn class="pcommon">
+                  ~Partial support with prefix:
+                  <em class="phighlight">
+                    -ms-
+                  </em>
+                </span>
+                <br/>
+                <br/>
+                <span class="pleft pcommon">
+                  <strong>
+                    Notes
+                  </strong>
+                </span>
+                <br/>
+                <br/>
+                <span class="pcommon">
+                  <em class="numtag">
+                    2
+                  </em>
+                  Partial support in IE refers to supporting an older version of the specification.
+                </span>
+              </p>
+              <p class="pright">
+                <span class="pheader">
+                  Browser Version
+                </span>
+                <br/>
+                <br/>
+                <span class="pcommon">
+                  Released Oct
+                </span>
+                <br/>
+                <br/>
+                <span class="pleft pcommon">
+                  <strong>
+                    Usage
+                  </strong>
+                </span>
+                <br/>
+                <br/>
+                <span class="pcommon">
+                  Global:
+                  <strong style="text-decoration: underline;">
+                    3.1%
+                  </strong>
+                </span>
+              </p>
+            </article>
           </li>
-          <li class="ele">
+          <li class="ele cell">
           </li>
-          <li class="ele">
+          <li class="ele cell">
           </li>
-          <li class="ele">
+          <li class="ele cell">
           </li>
         </ul>
         <ul class="pool">
-          <li class="ele">
+          <li class="ele ie">
             Edge
           </li>
-          <li class="ele">
+          <li class="ele cell">
           </li>
-          <li class="ele">
+          <li class="ele cell">
           </li>
-          <li class="ele">
+          <li class="ele ycell">14
           </li>
-          <li class="ele">
+          <li class="ele ycell">15
           </li>
-          <li class="ele">
+          <li class="ele cell">16
           </li>
-          <li class="ele">
+          <li class="ele cell">
           </li>
-          <li class="ele">
+          <li class="ele cell">
           </li>
         </ul>
         <ul class="pool">
-          <li class="ele">
+          <li class="ele firefox">
             Firefox
           </li>
-          <li class="ele">
+          <li class="ele cell">
           </li>
-          <li class="ele">
+          <li class="ele cell">
           </li>
-          <li class="ele">
+          <li class="ele cell">
           </li>
-          <li class="ele">
+          <li class="ele cell">
           </li>
-          <li class="ele">
+          <li class="ele cell">
           </li>
-          <li class="ele">
+          <li class="ele cell">
           </li>
-          <li class="ele">
+          <li class="ele cell">
           </li>
         </ul>
         <ul class="pool">
-          <li class="ele">
+          <li class="ele chrome">
             Chrome
           </li>
-          <li class="ele">
+          <li class="ele cell">
           </li>
-          <li class="ele">
+          <li class="ele cell">
           </li>
-          <li class="ele">
+          <li class="ele cell">
           </li>
-          <li class="ele">
+          <li class="ele cell">
           </li>
-          <li class="ele">
+          <li class="ele cell">
           </li>
-          <li class="ele">
+          <li class="ele cell">
           </li>
-          <li class="ele">
+          <li class="ele cell">
           </li>
         </ul>
         <ul class="pool">
-          <li class="ele">
+          <li class="ele safari">
             Safari
           </li>
-          <li class="ele">
+          <li class="ele cell">
           </li>
-          <li class="ele">
+          <li class="ele cell">
           </li>
-          <li class="ele">
+          <li class="ele cell">
           </li>
-          <li class="ele">
+          <li class="ele cell">
           </li>
-          <li class="ele">
+          <li class="ele cell">
           </li>
-          <li class="ele">
+          <li class="ele cell">
           </li>
-          <li class="ele">
+          <li class="ele cell">
           </li>
         </ul>
         <ul class="pool">
-          <li class="ele">
+          <li class="ele opera">
             Opera
           </li>
-          <li class="ele">
+          <li class="ele cell">
           </li>
-          <li class="ele">
+          <li class="ele cell">
           </li>
-          <li class="ele">
+          <li class="ele cell">
           </li>
-          <li class="ele">
+          <li class="ele cell">
           </li>
-          <li class="ele">
+          <li class="ele cell">
           </li>
-          <li class="ele">
+          <li class="ele cell">
           </li>
-          <li class="ele">
+          <li class="ele cell">
           </li>
         </ul>
         <ul class="pool">
-          <li class="ele">
+          <li class="ele ios">
             IOS safari
           </li>
-          <li class="ele">
+          <li class="ele cell">
           </li>
-          <li class="ele">
+          <li class="ele cell">
           </li>
-          <li class="ele">
+          <li class="ele cell">
           </li>
-          <li class="ele">
+          <li class="ele cell">
           </li>
-          <li class="ele">
+          <li class="ele cell">
           </li>
-          <li class="ele">
+          <li class="ele cell">
           </li>
-          <li class="ele">
+          <li class="ele cell">
           </li>
         </ul>
         <ul class="pool">
-          <li class="ele">
+          <li class="ele opera">
             Opear Mini
           </li>
-          <li class="ele">
+          <li class="ele cell">
           </li>
-          <li class="ele">
+          <li class="ele cell">
           </li>
-          <li class="ele">
+          <li class="ele cell">
           </li>
-          <li class="ele">
+          <li class="ele cell">
           </li>
-          <li class="ele">
+          <li class="ele cell">
           </li>
-          <li class="ele">
+          <li class="ele cell">
           </li>
-          <li class="ele">
+          <li class="ele cell">
           </li>
         </ul>
         <ul class="pool">
-          <li class="ele">
+          <li class="ele android">
             Android Browser
           </li>
-          <li class="ele">
+          <li class="ele cell">
           </li>
-          <li class="ele">
+          <li class="ele cell">
           </li>
-          <li class="ele">
+          <li class="ele cell">
           </li>
-          <li class="ele">
+          <li class="ele cell">
           </li>
-          <li class="ele">
+          <li class="ele cell">
           </li>
-          <li class="ele">
+          <li class="ele cell">
           </li>
-          <li class="ele">
+          <li class="ele cell">
           </li>
         </ul>
         <ul class="pool">
-          <li class="ele">
+          <li class="ele chrome">
             Chrome for android
           </li>
-          <li class="ele">
+          <li class="ele cell">
           </li>
-          <li class="ele">
+          <li class="ele cell">
           </li>
-          <li class="ele">
+          <li class="ele cell">
           </li>
-          <li class="ele">
+          <li class="ele cell">
           </li>
-          <li class="ele">
+          <li class="ele cell">
           </li>
-          <li class="ele">
+          <li class="ele cell">
           </li>
-          <li class="ele">
+          <li class="ele cell">
           </li>
         </ul>
       </div>
