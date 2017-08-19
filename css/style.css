@@ -167,12 +167,11 @@ h1 {
 
 #color-line {
   margin: 1rem 1%;
-  overflow: auto;
   width: auto;
 }
 
 .pool {
-  background-color: rgba(0,0,0,0.03);
+  background-color: rgba(0, 0, 0, 0.03);
   display: inline-block;
   float: left;
   font-size: 0.9rem;
@@ -181,9 +180,61 @@ h1 {
   margin: 0.5%;
 }
 
+
+/*泳池头的点击*/
+
+.asterikspos {
+  display: inline-block;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.asterikscolor {
+  color: #ba2f00;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+
+/*点击泳池头后的弹窗*/
+
+.hint {
+  border-style: solid;
+  text-align: left;
+  display: block;
+  position: absolute;
+  left: -100%;
+  top: 120%;
+  border-color: inherit;
+  width: 280%;
+  z-index: 4;
+  background-color: #F5EDD9;
+  padding: 0.5rem;
+  line-height: 1.2rem;
+}
+
+#edgehint:target {
+  display: block;
+}
+#edgehint{
+  display: none;
+}
+.closepos{
+  position: absolute;
+  top: 0;
+  right: 5px;
+  display: inline-block;
+}
 /*方块通用，包括泳池头、空块和彩色块*/
+
 .ele {
-  margin:0.1rem 0;
+  position: relative;
+  /*为了星号的定位*/
+  margin: 0.1rem 0;
   display: flex;
   width: 100%;
   height: 2rem;
@@ -193,14 +244,16 @@ h1 {
   justify-content: center;
 }
 
-.cell {
-  
+.cell {}
+
+.pool:hover {
+  background-color: rgba(0, 0, 0, 0.06);
 }
-.pool:hover{
-  background-color:rgba(0,0,0,0.06);
-}
+
+
 /*防止泳池头一起变色*/
-.ie,.firefox,.chrome,.safari,.opera,.ios,.android{
+
+.ie, .firefox, .chrome, .safari, .opera, .ios, .android {
   background-color: #F5EDD9;
   margin: 0;
 }
@@ -240,63 +293,130 @@ h1 {
   border-color: #7ba13b;
 }
 
+
 /*彩色块*/
-.ycell{  
+
+.ycell {
   color: white;
-  background-color:#A8BD04;
+  background-color: #A8BD04;
   position: relative;
 }
-.pool:hover>.ycell:hover{
- background-color: #A8BD04;
+
+.gcell {
+  color: white;
+  background-color: #39b54a;
+  position: relative;
 }
-.pool:hover>.ycell{
-  background-color:#899a00;
+
+.rcell {
+  color: white;
+  background-color: #c44230;
+  position: relative;
 }
+
+.pool:hover>.ycell:hover {
+  background-color: #A8BD04;
+}
+
+.pool:hover>.ycell {
+  background-color: #899a00;
+}
+
+.pool:hover>.gcell:hover {
+  background-color: #39b54a;
+}
+
+.pool:hover>.gcell {
+  background-color: #139424;
+}
+
+.pool:hover>.rcell:hover {
+  background-color: #c44230;
+}
+
+.pool:hover>.rcell {
+  background-color: #ab2a18;
+}
+
 /*彩色弹窗*/
-.popup{
+
+.popup {
   display: none;
   z-index: 3;
 }
-.pool:hover>.ycell:hover>.popup{
+
+.pool:hover>.ycell:hover>.popup, .pool:hover>.gcell:hover>.popup, .pool:hover>.rcell:hover>.popup {
   padding-top: 20%;
-  box-shadow:0.1rem 0.1rem 0.1rem black;
+  box-shadow: 0.1rem 0.1rem 0.1rem black;
   display: block;
   position: absolute;
   width: 350%;
   min-height: 8rem;
-  background:linear-gradient(to right,#BAC75A 0.1%,#7A8523 5%);
+}
+
+
+/*不同色彩的弹窗*/
+
+.ypopup {
+  background: linear-gradient(to right, #BAC75A 0.1%, #7A8523 5%);
+}
+
+.gpopup {
+  background: linear-gradient(to right, #70BF7B 0.1%, #39b54a 5%);
+}
+
+.rpopup {
+  background: linear-gradient(to right, #D07568 0.1%, #c44230 5%);
+}
+
+
+/*不同浮动位置的弹窗*/
+
+.rtpopup {
   left: 100%;
 }
+
+.lfpopup {
+  right: 100%;
+}
+
+
 /*彩色弹窗内部*/
-.pleft{
+
+.pleft {
   padding-left: 5%;
-  float:left;
+  float: left;
   width: 40%;
 }
-.pright{
+
+.pright {
   padding-right: 5%;
-  float:right;
+  float: right;
   width: 40%;
 }
-.pheader{
+
+.pheader {
   width: 100%;
   display: inline-block;
   font-size: 0.7rem;
-  border-bottom-style:solid;
-  border-color:white;
+  border-bottom-style: solid;
+  border-color: white;
   border-width: thin;
 }
-.pcommon{
+
+.pcommon {
   display: inline-block;
   font-size: 0.6rem;
   text-align: left;
   margin: 0.3rem;
 }
-.phighlight{
+
+.phighlight {
   background: yellow;
   color: black;
 }
-.numtag{
+
+.numtag-small {
   background-color: #ddd;
   display: inline-block;
   font-size: 0.5rem;
@@ -305,8 +425,81 @@ h1 {
   color: black;
 }
 
+.numtag-middle {
+  background-color: #ddd;
+  display: inline-block;
+  line-height: 1rem;
+  font-size: 1rem;
+  width: 1rem;
+  height: 1rem;
+  color: black;
+}
+
+/*当鼠标移至彩色弹窗上时消失(未解决)*/
+
+
+/*@supports(display:block){
+.ycell:hover .popup:hover{
+  display: none;
+}
+}*/
+
+
 /*下方信息*/
 
 #text-line {
   background: #e0c89b;
+}
+
+/*列表文字*/
+.tag{
+  cursor: pointer;
+  position: relative;
+  display: inline-block;
+  list-style-type: none;
+  line-height: 2rem;
+  margin-bottom: 0;
+  background: #ecdec3;
+  margin-right: 0.1rem;
+}
+.tag:after{
+  content: "";
+  position: absolute;
+  display: inline-block;
+  border-style:solid;
+  border-left-color: #ecdec3;
+  border-top-color: transparent;
+  border-width: 2rem 0 0 0.5rem;
+}
+.tag:hover{
+  background: #e0c89b;
+}
+.tagselected{
+  cursor: pointer;
+  position: relative;
+  display: inline-block;
+  list-style-type: none;
+  line-height: 2rem;
+  margin-bottom: 0;
+  margin-right: 0.1rem;
+  background: #e0c89b;
+}
+.tagselected::after{
+  content: "";
+  position: absolute;
+  display: inline-block;
+  border-style:solid;
+  border-left-color: #e0c89b;
+  border-top-color: transparent;
+  border-width: 2rem 0 0 0.5rem;
+}
+.tag:hover::after{
+  border-left-color: #e0c89b;
+}
+#tag-line{
+  margin-bottom: 0;
+}
+#text-line{
+  padding: 2rem 1rem;
+  line-height: 2rem;
 }
