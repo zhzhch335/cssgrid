@@ -7,8 +7,9 @@
     </title>
     <link rel="stylesheet" href="css/style.css"/>
     <link rel="stylesheet" href="css/font.css"/>
+    <link rel="stylesheet" href="css/media.css"/>
     <script src="js/jquery.js"></script>
-    <script src="js/added.js"></script>    
+    <script src="js/added.js"></script>
   </head>
   <body>
     <div id="main">
@@ -79,7 +80,10 @@
           </li>
           <li class="ele cell">
           </li>
-          <li class="ele ycell">
+          <li class="ele ycell numtag2">
+            <em class="numtag-small numtag-left">
+              2
+            </em>
             11
             <article class="popup ypopup rtpopup">
               <header>
@@ -140,18 +144,12 @@
               </p>
             </article>
           </li>
-          <li class="ele cell">
-          </li>
-          <li class="ele cell">
-          </li>
-          <li class="ele cell">
-          </li>
         </ul>
         <ul class="pool">
           <a href="#edgehint">
             <li href="#" class="ele ie">
               Edge
-              <span href="" class="asterikspos asterikscolor">
+              <span class="asterikspos asterikscolor">
                 *
               </span>
               <span style="cursor: default;" id="edgehint" class="hint">
@@ -171,7 +169,10 @@
           </li>
           <li class="ele cell">
           </li>
-          <li class="ele ycell">
+          <li class="ele ycell numtag2">
+            <em class="numtag-small numtag-left">
+              2
+            </em>
             14
             <article class="popup ypopup rtpopup">
               <header>
@@ -232,7 +233,10 @@
               </p>
             </article>
           </li>
-          <li class="ele ycell">
+          <li class="ele ycell numtag2">
+            <em class="numtag-small numtag-left">
+              2
+            </em>
             15
             <article class="popup ypopup rtpopup">
               <header>
@@ -354,10 +358,6 @@
               </p>
             </article>
           </li>
-          <li class="ele cell">
-          </li>
-          <li class="ele cell">
-          </li>
         </ul>
         <ul class="pool">
           <li class="ele firefox">
@@ -365,7 +365,10 @@
           </li>
           <li class="ele cell">
           </li>
-          <li class="ele gcell">
+          <li class="ele gcell numtag4">
+            <em class="numtag-small numtag-left">
+              4
+            </em>
             52
             <article class="popup gpopup rtpopup">
               <header>
@@ -736,7 +739,10 @@
           <li class="ele chrome">
             Chrome
           </li>
-          <li class="ele rcell">
+          <li class="ele rcell numtag1">
+            <em class="numtag-small numtag-left">
+              1
+            </em>
             49
             <article class="popup rpopup rtpopup">
               <header>
@@ -1357,8 +1363,6 @@
               </p>
             </article>
           </li>
-          <li class="ele cell">
-          </li>
         </ul>
         <ul class="pool">
           <li class="ele opera">
@@ -1551,15 +1555,27 @@
               </p>
             </article>
           </li>
-          <li class="ele cell">
-          </li>
-          <li class="ele cell">
-          </li>
         </ul>
         <ul class="pool">
-          <li class="ele ios">
-            IOS safari
-          </li>
+          <a href="#ioshint">
+            <li class="ele ios">
+              IOS safari
+              <span class="asterikspos asterikscolor">
+                *
+              </span>
+              <span style="cursor: default;" id="ioshint" class="hint">
+                <span class="asterikscolor">
+                  *
+                </span>
+                The Safari browser for iOS is tied to the operating system, so the numbers used are based on the OS version.
+                <object>
+                  <a href="#" class="closepos">
+                    x
+                  </a>
+                </object>
+              </span>
+            </li>
+          </a>
           <li class="ele cell">
           </li>
           <li class="ele rcell">
@@ -1806,15 +1822,28 @@
               </p>
             </article>
           </li>
-          <li class="ele cell">
-          </li>
-          <li class="ele cell">
-          </li>
         </ul>
         <ul class="pool">
-          <li class="ele opera">
-            Opear Mini
-          </li>
+          <a href="#operahint">
+            <li class="ele opera">
+              Opear Mini
+              <span class="asterikspos asterikscolor">
+                *
+              </span>
+              <span style="cursor: default;" id="operahint" class="hint">
+                <span class="asterikscolor">
+                  *
+                </span>
+                In most cases Opera Mini processing is done via Opera servers, which often prevents JS from working correctly.
+                As of version 8, the default mode of Opera Mini on iOS uses the iOS Safari engine, though Mini mode can be enabled.
+                <object>
+                  <a href="#" class="closepos">
+                    x
+                  </a>
+                </object>
+              </span>
+            </li>
+          </a>
           <li class="ele cell">
           </li>
           <li class="ele cell">
@@ -1882,17 +1911,28 @@
               </p>
             </article>
           </li>
-          <li class="ele cell">
-          </li>
-          <li class="ele cell">
-          </li>
-          <li class="ele cell">
-          </li>
         </ul>
         <ul class="pool">
-          <li class="ele android">
-            Android Browser
-          </li>
+          <a href="#androidhint">
+            <li class="ele android">
+              Android Browser
+              <span class="asterikspos asterikscolor">
+                *
+              </span>
+              <span style="cursor: default;" id="androidhint" class="hint">
+                <span class="asterikscolor">
+                  *
+                </span>
+                Android browser/WebView version numbers through 4.4 refer to the version of Android OS. Support listed is for the Android core; it should be noted that many hardware vendors (Samsung, HTC, etc.) use altered version of their default browser which may include more/less/buggy support.
+                Starting in Android 5, the web engine can be updated separately, so the latest
+                <object>
+                  <a href="#" class="closepos">
+                    x
+                  </a>
+                </object>
+              </span>
+            </li>
+          </a>
           <li class="ele cell">
           </li>
           <li class="ele rcell">
@@ -2078,12 +2118,6 @@
               </p>
             </article>
           </li>
-          <li class="ele cell">
-          </li>
-          <li class="ele cell">
-          </li>
-          <li class="ele cell">
-          </li>
         </ul>
         <ul class="pool">
           <li class="ele chrome">
@@ -2156,35 +2190,183 @@
               </p>
             </article>
           </li>
-          <li class="ele cell">
-          </li>
-          <li class="ele cell">
-          </li>
-          <li class="ele cell">
-          </li>
         </ul>
       </div>
       <div id="react-line">
         <ul id="tag-line">
-          <li class="tagselected">
+          <li id="notes" class="tag tagselected">
             Notes
           </li>
-          <li class="tag">
-            Known issues(0)
+          <li id="issues" class="tag">
+            Known issues(2)
           </li>
-          <li class="tag">
-            Resources(11)
+          <li id="resources" class="tag">
+            Resources(12)
           </li>
-          <li class="tag">
+          <li id="feedback" class="tag">
             Feedback
           </li>
         </ul>
         <div id="text-line">
-          <em class="numtag-middle">1 </em> Enabled in Chrome through the "experimental Web Platform features" flag in chrome://flags
-          <br/>
-          <em class="numtag-middle">2</em> Partial support in IE refers to supporting an older version of the specification.
-          <br/>
-          <em class="numtag-middle">4</em> There are some bugs with overflow (1356820, 1348857, 1350925)
+          <div class="innerline" id="innerline1">
+            <span class="texttag1">
+              <em class="numtag-middle">
+                1
+              </em>
+              Enabled in Chrome through the "experimental Web Platform features" flag in chrome://flags
+              <br/>
+            </span>
+            <span class="texttag2">
+              <em class="numtag-middle">
+                2
+              </em>
+              Partial support in IE refers to supporting an older version of the specification.
+              <br/>
+            </span>
+            <span class="texttag4">
+              <em class="numtag-middle">
+                4
+              </em>
+              There are some bugs with overflow (1356820, 1348857, 1350925)
+            </span>
+          </div>
+          <div class="innerline" id="innerline2">
+            <ul>
+              <li>
+                GridBugs: aims to be a community curated list of CSS Grid Layout bugs
+              </li>
+              <li>
+                Safari does not yet support intrinsic and extrinsic sizing with grid properties such as grid-template-rows
+              </li>
+            </ul>
+          </div>
+          <div class="innerline" id="innerline3">
+            <ul>
+              <li class="feature-link-item">
+                <a href="http://www.w3.org/TR/css3-grid-layout/">
+                  Specification
+                </a>
+                [w3.org]
+                <span class="linktag">
+                  ref
+                </span>
+              </li>
+              <li class="feature-link-item">
+                <a href="http://blogs.msdn.com/b/ie/archive/2011/04/14/ie10-platform-preview-and-css-features-for-adaptive-layouts.aspx">
+                  IE Blog post
+                </a>
+                [blogs.msdn.com]
+                <span class="linktag">
+                  info
+                </span>
+              </li>
+              <li class="feature-link-item">
+                <a href="https://bugs.webkit.org/show_bug.cgi?id=60731">
+                  Webkit (Chrome, Safari, etc.) feature request
+                </a>
+                [bugs.webkit.org]
+                <span class="linktag">
+                  info
+                </span>
+              </li>
+              <li class="feature-link-item">
+                <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=616605">
+                  Mozilla (Firefox) feature request
+                </a>
+                [bugzilla.mozilla.org]
+                <span class="linktag">
+                  info
+                </span>
+              </li>
+              <li class="feature-link-item">
+                <a href="https://github.com/codler/Grid-Layout-Polyfill">
+                  Polyfill based on old spec
+                </a>
+                [github.com]
+                <span class="linktag">
+                  polyfill
+                </span>
+              </li>
+              <li class="feature-link-item">
+                <a href="https://github.com/FremyCompany/css-grid-polyfill/">
+                  Polyfill based on new spec
+                </a>
+                [github.com]
+                <span class="linktag">
+                  polyfill
+                </span>
+              </li>
+              <li class="feature-link-item">
+                <a href="https://gridbyexample.com/">
+                  Css Grid By Example: Everything you need to learn CSS Grid Layout
+                </a>
+                [gridbyexample.com]
+                <span class="linktag">
+                  info
+                </span>
+              </li>
+              <li class="feature-link-item">
+                <a href="https://webkit.org/blog/7434/css-grid-layout-a-new-layout-module-for-the-web/">
+                  WebKit Blog post
+                </a>
+                [webkit.org]
+                <span class="linktag">
+                  info
+                </span>
+              </li>
+              <li class="feature-link-item">
+                <a href="http://status.modern.IE/grid">
+                  IE platform status: Prefixed
+                </a>
+                [status.modern.IE]
+                <span class="linktag">
+                  official status
+                </span>
+              </li>
+              <li class="feature-link-item">
+                <a href="http://www.chromestatus.com/feature/4589636412243968">
+                  Chrome platform status:
+                </a>
+                [chromestatus.com]
+                <span class="linktag">
+                  official status
+                </span>
+              </li>
+              <li class="feature-link-item">
+                <a href="https://platform-status.mozilla.org/#css-grid-layout">
+                  Firefox platform status: 52
+                </a>
+                [platform-status.mozilla.org]
+                <span class="linktag">
+                  official status
+                </span>
+              </li>
+              <li class="feature-link-item">
+                <a href="http://webkit.org/status.html#specification-css-grid-layout-level-1">
+                  WebKit platform status: Supported
+                </a>
+                [webkit.org]
+                <span class="linktag">
+                  official status
+                </span>
+              </li>
+            </ul>
+          </div>
+          <div class="innerline" id="innerline4">
+            <div class="">
+              <form>
+                <p>
+                  Send your comments, corrections, etc. If you have a question you\'d like answered, please include an email address. Or,
+                  <a href="https://github.com/Fyrd/caniuse/blob/master/features-json/css-grid.json">
+                    edit this data on GitHub
+                  </a>
+                </p>
+                <textarea class="feature__feedback-textarea" name="comment" required="required">
+                </textarea>
+                <input class="ciu-button" value="Submit" type="submit"/>
+              </form>
+            </div>
+          </div>
         </div>
       </div>
     </div>

@@ -4,7 +4,7 @@ body, html {
   padding: 0;
   margin: 0;
   font: 100%/1 'Open Sans', Helvetica, Arial, sans-serif;
-  font-size: 20px;
+  font-size: 15px;
   background: linear-gradient(to right, #403829 90%, #453e2e 0);
   background-size: 0.5rem 100%;
 }
@@ -24,9 +24,9 @@ body:before {
 
 #main {
   position: relative;
-  left: 5%;
+  left: 10%;
   z-index: 2;
-  width: 92%;
+  width: 80%;
   margin-top: 1rem;
   background-color: #F5EDD9;
 }
@@ -36,26 +36,16 @@ body:before {
 
 #sharp {
   cursor: pointer;
-  ;
   content: "#";
   position: absolute;
-  top: 0.01rem;
-  left: -2.29rem;
+  top: 0.5rem;
+  left: -2rem;
   display: inline;
-  padding: 10px;
-  font-size: 40px;
+  padding: 5px 8px;
+  font-size: 1.5rem;
+  font-weight: 500;
   color: white;
   background-color: #f6761f;
-}
-
-@media (max-width: 777px) {
-  #sharp {
-    position: relative;
-    left: 20px;
-    padding: 6px 10px;
-    margin-right: 3px;
-    font-size: 20px;
-  }
 }
 
 #sharp:hover {
@@ -100,13 +90,6 @@ h1 {
   min-width: 14em;
   margin-right: 1em;
   line-height: 2.5em;
-}
-
-@media (max-width: 777px) {
-  #global {
-    float: left;
-    margin: 1.5em;
-  }
 }
 
 .global {
@@ -168,6 +151,7 @@ h1 {
 #color-line {
   margin: 1rem 1%;
   width: auto;
+  height: auto;
 }
 
 .pool {
@@ -217,26 +201,30 @@ a {
   line-height: 1.2rem;
 }
 
-#edgehint:target {
+#edgehint:target, #ioshint:target, #operahint:target, #androidhint:target {
   display: block;
 }
-#edgehint{
+
+#edgehint, #ioshint, #operahint, #androidhint {
   display: none;
 }
-.closepos{
+
+.closepos {
   position: absolute;
   top: 0;
   right: 5px;
   display: inline-block;
 }
+
+
 /*方块通用，包括泳池头、空块和彩色块*/
 
 .ele {
+  margin: 4px 2px 2px 2px;
   position: relative;
   /*为了星号的定位*/
-  margin: 0.1rem 0;
   display: flex;
-  width: 100%;
+  width: 100%-2px;
   height: 2rem;
   align-items: center;
   list-style-type: none;
@@ -297,18 +285,27 @@ a {
 /*彩色块*/
 
 .ycell {
+  /*line-height: 2rem;*/
+  display: flex;
   color: white;
   background-color: #A8BD04;
   position: relative;
+  /*border-style: solid;
+  border-width: 2px 0;
+  border-color: transparent;*/
 }
 
 .gcell {
+  /*line-height: 2rem;*/
+  display: flex;
   color: white;
   background-color: #39b54a;
   position: relative;
 }
 
 .rcell {
+  /*line-height: 2rem;*/
+  /*display: flex;*/
   color: white;
   background-color: #c44230;
   position: relative;
@@ -338,11 +335,12 @@ a {
   background-color: #ab2a18;
 }
 
+
 /*彩色弹窗*/
 
 .popup {
   display: none;
-  z-index: 3;
+  z-index: 4;
 }
 
 .pool:hover>.ycell:hover>.popup, .pool:hover>.gcell:hover>.popup, .pool:hover>.rcell:hover>.popup {
@@ -372,12 +370,13 @@ a {
 
 /*不同浮动位置的弹窗*/
 
-.rtpopup {
-  left: 100%;
-}
-
-.lfpopup {
-  right: 100%;
+@media (min-width: 778px) {
+  .rtpopup {
+    left: 100%;
+  }
+  .lfpopup {
+    right: 100%;
+  }
 }
 
 
@@ -435,6 +434,13 @@ a {
   color: black;
 }
 
+.numtag-left {
+  position: absolute;
+  left: 0;
+  top: 2px;
+}
+
+
 /*当鼠标移至彩色弹窗上时消失(未解决)*/
 
 
@@ -451,8 +457,10 @@ a {
   background: #e0c89b;
 }
 
+
 /*列表文字*/
-.tag{
+
+.tag {
   cursor: pointer;
   position: relative;
   display: inline-block;
@@ -461,20 +469,25 @@ a {
   margin-bottom: 0;
   background: #ecdec3;
   margin-right: 0.1rem;
+  z-index: 2
 }
-.tag:after{
+
+.tag:after {
   content: "";
   position: absolute;
   display: inline-block;
-  border-style:solid;
+  border-style: solid;
   border-left-color: #ecdec3;
   border-top-color: transparent;
   border-width: 2rem 0 0 0.5rem;
 }
-.tag:hover{
+
+.tag:hover {
   background: #e0c89b;
+  z-index: 3;
 }
-.tagselected{
+
+.tagselected {
   cursor: pointer;
   position: relative;
   display: inline-block;
@@ -483,23 +496,85 @@ a {
   margin-bottom: 0;
   margin-right: 0.1rem;
   background: #e0c89b;
+  z-index: 3;
 }
-.tagselected::after{
+
+.tagselected::after {
   content: "";
   position: absolute;
   display: inline-block;
-  border-style:solid;
+  border-style: solid;
   border-left-color: #e0c89b;
   border-top-color: transparent;
   border-width: 2rem 0 0 0.5rem;
 }
-.tag:hover::after{
+
+.tag:hover::after {
   border-left-color: #e0c89b;
 }
-#tag-line{
+
+#tag-line {
   margin-bottom: 0;
+  clear: both;
+  /*防止彩色块影响下方标签布局*/
 }
-#text-line{
+
+#text-line {
   padding: 2rem 1rem;
   line-height: 2rem;
+}
+
+.react-line {
+  display: inline-block;
+  margin: 1rem;
+  width: auto;
+  position: relative;
+}
+
+.ciu-button {
+  background: #fff;
+  color: #ba2f00;
+  border: 0;
+  padding: .3em 1em;
+  font-size: 1.2em;
+  border-radius: 0;
+  margin: 0;
+}
+
+.feature__feedback-textarea {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 800px;
+  display: block;
+  border: 0;
+  margin: .5em 0 1em;
+  padding: 0.5rem;
+  border-radius: 0;
+}
+
+.feature-panel-container ul {
+  list-style: square;
+}
+
+.feature-link-item>a {
+  color: #ba2f00;
+  text-decoration: none;
+}
+
+.linktag {
+  font-size: .75em;
+  background: #fff;
+  color: #DB5600;
+  border-radius: 99px;
+  padding: .1em .6em;
+  margin: 0 0 0 6px;
+}
+
+.texthighlight {
+  color: #fff;
+  background-color: #DB5600
+}
+
+#innerline2, #innerline3, #innerline4 {
+  display: none;
 }
